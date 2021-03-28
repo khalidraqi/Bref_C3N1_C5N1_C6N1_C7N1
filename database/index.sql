@@ -1,0 +1,45 @@
+
+1)
+
+  CREATE DATABASE `briefphp3`
+
+2)
+
+CREATE TABLE IF NOT EXISTS `users` (
+ID int(11) NOT NULL AUTO_INCREMENT,
+NAME varchar(50) NOT NULL,
+FAMILYNAME varchar(50) NOT NULL,
+PASSWORD varchar(255) NOT NULL,
+EMAIL varchar(100) NOT NULL,
+PRIMARY KEY (`id`)
+);
+
+3 ) 
+
+CREATE TABLE IF NOT EXISTS `technos` (
+id int(11) NOT NULL AUTO_INCREMENT,
+html INTEGER NOT NULL,
+cgi  INTEGER NOT NULL,
+js  INTEGER NOT NULL,
+ajax INTEGER NOT NULL,
+php INTEGER NOT NULL,
+id_users INTEGER NOT NULL,
+Foreign Key(id_users) references users (ID),
+PRIMARY KEY (id_users)
+);
+
+4 )
+CREATE TABLE IF NOT EXISTS `formations` (
+id int(11) NOT NULL AUTO_INCREMENT,
+Foreign Key(id) references users ( ID),
+NAME varchar(50) NOT NULL,
+FAMILYNAME varchar(50) NOT NULL,
+TCHNOLOGIE INTEGER NOT NULL,
+DATE DATE INTEGER NOT NULL,
+PRIMARY KEY (`id`)
+) ;
+
+
+  
+
+
