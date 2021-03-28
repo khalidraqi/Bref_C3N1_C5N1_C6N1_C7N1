@@ -1,7 +1,7 @@
 
 1)
 
-  CREATE DATABASE `briefphp3`
+CREATE DATABASE `briefphp3`
 
 2)
 
@@ -11,6 +11,7 @@ NAME varchar(50) NOT NULL,
 FAMILYNAME varchar(50) NOT NULL,
 PASSWORD varchar(255) NOT NULL,
 EMAIL varchar(100) NOT NULL,
+ROLE text NOT NULL,
 PRIMARY KEY (`id`)
 );
 
