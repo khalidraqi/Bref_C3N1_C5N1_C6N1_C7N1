@@ -29,6 +29,7 @@ PRIMARY KEY (id_users)
 );
 
 4 )
+
 CREATE TABLE IF NOT EXISTS `formations` (
 id int(11) NOT NULL AUTO_INCREMENT,
 Foreign Key(id) references users ( ID),
