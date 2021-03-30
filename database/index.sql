@@ -1,6 +1,6 @@
 1)
 
-CREATE DATABASE `briefphp3`
+CREATE DATABASE `briefphp2`
 
 2)
 
@@ -14,7 +14,7 @@ ROLE text NOT NULL,
 PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
-3 ) 
+3) 
 
 CREATE TABLE IF NOT EXISTS `technos` (
 id int(11) NOT NULL AUTO_INCREMENT,
@@ -28,7 +28,7 @@ Foreign Key(id_users) references users (ID),
 PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
-4 )
+4)
 
 CREATE TABLE IF NOT EXISTS `formations` (
 id int(11) NOT NULL AUTO_INCREMENT,
