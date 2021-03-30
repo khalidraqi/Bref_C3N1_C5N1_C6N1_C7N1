@@ -1,4 +1,3 @@
-
 1)
 
 CREATE DATABASE `briefphp3`
@@ -13,7 +12,7 @@ PASSWORD varchar(255) NOT NULL,
 EMAIL varchar(100) NOT NULL,
 ROLE text NOT NULL,
 PRIMARY KEY (id)
-);
+)ENGINE=InnoDB;
 
 3 ) 
 
@@ -26,8 +25,8 @@ ajax INTEGER NOT NULL,
 php INTEGER NOT NULL,
 id_users INTEGER NOT NULL,
 Foreign Key(id_users) references users (ID),
-PRIMARY KEY (id_users)
-);
+PRIMARY KEY (id)
+)ENGINE=InnoDB;
 
 4 )
 
@@ -38,8 +37,11 @@ NAME varchar(50) NOT NULL,
 FAMILYNAME varchar(50) NOT NULL,
 TCHNOLOGIE INTEGER NOT NULL,
 DATE DATE INTEGER NOT NULL,
+id_users INTEGER NOT NULL,
+Foreign Key(id_users) references users (ID),
 PRIMARY KEY (id)
-) ;
+)ENGINE=InnoDB;
+
 
 
   
