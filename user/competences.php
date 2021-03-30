@@ -12,6 +12,7 @@
 <body>
     
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+
 <?php
 
 include_once '../connect.php';
@@ -31,6 +32,7 @@ if(isset($_GET['logout'])){
     header("location:http://localhost/brief/login.php",true); 
     }
 ?>
+
 <form action="">
 <a href="index.php" class="btn btn-warning" type="submit" name="edit" >Accueil</a>
 
