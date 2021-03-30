@@ -10,6 +10,7 @@
 </head>
 <body>
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+
 <?php
 
 include_once '../connect.php';
@@ -29,6 +30,7 @@ if(isset($_GET['logout'])){
     header("location:http://localhost/brief/login.php",true); 
     }
 ?>
+
 <form action="">
 <a href="competences.php" class="btn btn-warning" type="submit" name="edit" >Ajouter des compètences</a>
 
