@@ -33,8 +33,8 @@ PRIMARY KEY (id)
 CREATE TABLE IF NOT EXISTS `formations` (
 id int(11)  NULL AUTO_INCREMENT,
 Foreign Key(id) references users ( ID),
-NAME varchar(50) NOT NULL,
-FAMILYNAME varchar(50) NOT NULL,
+NAME varchar(50) NULL,
+FAMILYNAME varchar(50)  NULL,
 TCHNOLOGIE INTEGER  NULL,
 DATE DATE INTEGER  NULL,
 id_users INTEGER NULL,
