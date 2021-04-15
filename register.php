@@ -5,38 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>register</title>
+  <link rel="stylesheet" href="./styles/styles2.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+  
 </head>
 
 <body>
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+   <!-- Navbar Section -->
+   <nav class="navbar">
+      <a href="" class="navbar__logo">WeDev</a>
+      
 
-  <h3>logo</h3>
-  <a class="nav-link" href="index.php">Accueil</a>
-  <a class="btn btn-warning" href="login.php">Connexion</a>
+      <div class="navbar__bars"><i class="fas fa-bars"></i></div>
 
-</nav> 
+      <div class="navbar__menu">
+        <a href="index.php" class="" type="submit" name="edit" style=" margin-right: 60pc;font-size:120%;;">Accueil</a>
+        <a href="login.php" class="navbar__menu--links" id="button">Connexion</a>
+      </div>
+    </nav>
 
-<h1 class="container mt-4" >Register</h1>
+    <div class="row justify-content-center" >
+    <div class="col-4">
+    <div class="hero__container--right ">
+          <img
+            src="images/Mobileloginpana.svg"
+            alt="alien"
+            class="hero__container--img"
+          />
+        </div>
+    </div>
+    <div class="col-4">
+    <h1 class="container mt4" >Register</h1>
 
-<div class="container mt-4" >
+    <div class="container mt-4" >
 
-<form method="POST" >
-Nom : <input class="form-control " type="text" name="name"/>
-<br>
-Nom du famille : <input class="form-control" type="text" name="familyname"/>
-<br>
-Email : <input class="form-control" type="email" name="email" />
-<br>
-Mot de passe : <input class="form-control" type="password" name="password"/>
-<br>
-<button class="btn btn-primary" type="submit" name="register">Register</button>
-</form>
-
-</div>
-
+     <form method="POST" >
+     Nom : <input class="form-control " type="text" name="name"/>
+     <br>
+     Nom du famille : <input class="form-control" type="text" name="familyname"/>
+     <br>
+     Email : <input class="form-control" type="email" name="email" />
+     <br>
+     Mot de passe : <input class="form-control" type="password" name="password"/>
+     <br>
+     <button class="btn btn-success" type="submit" name="register">Register</button>
+     </form>
+   </div>
+   </div>
+  </div>
 
 <?php 
 
@@ -66,9 +83,7 @@ if(isset($_POST['register'])){
         $addUser->bindParam("EMAIL",$email);
         $addUser->bindParam("PASSWORD",$password);
         if($addUser->execute()){
-            echo '<div class="alert alert-success container mt-4" role="alert">
-            Compte crèè avec succès 
-          </div>';
+          header("Location: login.php");
         }else{
             echo '<div class="alert alert-danger container mt-4" role="alert">
             Il y a une erreur 
